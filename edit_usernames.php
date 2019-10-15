@@ -1,14 +1,14 @@
 <?php
 /**
-* Plugin Name: Username Editor
-* Description: Change a user's username within the admin screen.
-* Version: 0.1.0
-* Author: Michael Robinson (Miller Media)
-* License: GPL12
+Plugin Name: Edit Usernames
+Description: Change a user's username within the admin screen.
+Author: Miller Media ( Michael Robinson )
+Author URI: http://www.millermedia.io
+Version: 1.0
+Requires PHP: 5.6
+License: GPLv2
+Text Domain: edit-usernames
 */
-
-// Current version disallows editing of your own username, and those of superadmins
-// All references to previous username are changed after editing, including comment author
 
 include( 'inc/helpers.php' );
 
