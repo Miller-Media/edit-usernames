@@ -11,7 +11,7 @@ class EUN_EditUsernames {
      */
     public function __construct()
     {
-        if ( isset( $_GET['usernameexists'] ) && $_GET['usernameexists'] == 'yes' ) {
+        if ( isset( $_GET['usernamenotupdated'] ) ) {
             add_action( 'admin_notices', array( $this, 'username_admin_notice__error' ) );
         }
 
@@ -31,9 +31,15 @@ class EUN_EditUsernames {
      */
     public function username_admin_notice__error()
     {
-        $class = 'notice notice-error';
-        $message = __( 'ERROR: Username already exists. Please choose another.', 'edit-usernames' );
+        if ( $_GET['usernamenotupdated'] == 'usernameinvalid' ) {
+            $message = __( 'ERROR: Username invalid. Please choose another.', 'edit-usernames' );
+        } elseif ( $_GET['usernamenotupdated'] == 'usernameexists' ) {
+            $message = __( 'ERROR: Username already exists. Please choose another.', 'edit-usernames' );
+        } else {
+            return;
+        }
 
+        $class = 'notice notice-error';        
         printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message );
     }
 
@@ -60,9 +66,14 @@ class EUN_EditUsernames {
                 // Nothing has changed, so we exit
                 if ( $current_username == $new_username ) {
                     return;
+                } elseif ( ! validate_username( $new_username ) ) {
+                    $return_url = wp_get_referer();
+                    $redirect = add_query_arg( 'usernamenotupdated', 'usernameinvalid', $return_url );
+                    wp_safe_redirect( $redirect );
+                    exit();
                 } elseif ( username_exists( $new_username ) ) {
                     $return_url = wp_get_referer();
-                    $redirect = add_query_arg( 'usernameexists', 'yes', $return_url );
+                    $redirect = add_query_arg( 'usernamenotupdated', 'usernameexists', $return_url );
                     wp_safe_redirect( $redirect );
                     exit();
                 } else {
@@ -111,7 +122,11 @@ class EUN_EditUsernames {
     }
 
 
-    // Check whether nicename is sanitized version of login; update if not
+    /**
+     * Check whether nicename is sanitized version of login; update if not
+     *
+     * @param  int   $user_id
+     */
     public function update_user_nicename( $user_id )
     {
         global $wpdb;
@@ -119,13 +134,17 @@ class EUN_EditUsernames {
         $user_login = $user_id->user_login;
         $user_nicename = $user_id->user_nicename;
 
-        if ( $user_nicename != strtolower( str_replace( ' ', '-', $user_login ) )){
+        if ( $user_nicename != strtolower( str_replace( ' ', '-', $user_login ) ) ) {
             $sql_nicename = $wpdb->prepare( "UPDATE $wpdb->users SET user_nicename = %s WHERE user_login = %s", strtolower( str_replace( ' ', '-', $user_login ) ), $user_login );
             $wpdb->query( $sql_nicename );
         }
     }
 
-    // Update comment author
+    /**
+     * Update comment author
+     *
+     * @param  int   $user_id
+     */
     public function update_comment_author( $user_id )
     {
         global $wpdb;
