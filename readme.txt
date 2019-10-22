@@ -31,6 +31,10 @@ If you find that a part of this plugin isn't working, please don't simply click 
 1. Pencil/edit icon in user edit screen
 
 == Changelog ==
+
+= 1.1 =
+* Additional check for valid username added
+
 = 1.0 =
 * Initial release
 
