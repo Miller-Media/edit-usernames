@@ -3,7 +3,7 @@ Contributors: MillerMediaNow, mikemm01
 Tags: username, edit, profile, users
 Requires PHP: 5.6
 Requires at least: 3.0
-Tested up to: 5.2.4
+Tested up to: 5.8
 Stable tag: 1.0
 License: GPLv2
 
