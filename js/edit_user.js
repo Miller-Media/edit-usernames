@@ -4,7 +4,7 @@ jQuery(document).ready(function(){
     var display_name = jQuery('#display_name [selected="selected"]').text();
     var names_are_the_same = false;
     if ( username == display_name ) {
-        console.log('username and display name are the same');
+        // console.log('username and display name are the same');
         names_are_the_same = true;
     }
 

@@ -15,7 +15,10 @@ if ( is_admin() ){
     // boolean to control whether to allow self editing
     define( 'EUN_SELFEDIT', false );
     define( 'EUN_PLUGIN_PATH', plugin_dir_path(__FILE__) );
+    define( 'EUN_PLUGIN_NAME', 'Edit Usernames');
+    define( 'EUN_SETTINGS_PREFIX', 'eun_setting_');
 
+    require_once( EUN_PLUGIN_PATH . 'inc/settings.php' );
     require_once( EUN_PLUGIN_PATH . 'inc/helpers.php' );
     require_once( EUN_PLUGIN_PATH . 'inc/edit-usernames.php' );
 

@@ -51,8 +51,21 @@ class EUN_EditUsernames {
     public function update_username( $user_id )
     {
         // Only allow admins to edit usernames
-        if ( ( current_user_can( 'administrator' ) || current_user_can( 'manage_woocommerce' ) || current_user_can('edit_users') ) && !( is_super_admin ( $user_id ) ) ) {
+        $option_values = get_option(EUN_SETTINGS_PREFIX.'options');
+        $allow_admin_editing = false;
 
+        if(is_array($option_values) && array_key_exists(EUN_SETTINGS_PREFIX.'edit_admin', $option_values) && $option_values[EUN_SETTINGS_PREFIX.'edit_admin']=='on'){
+            $allow_admin_editing = true;
+        }
+
+        if (
+            (
+                current_user_can( 'administrator' ) ||
+                current_user_can( 'manage_woocommerce' ) ||
+                current_user_can('edit_users') ) &&
+            (!is_super_admin ( $user_id ) || $allow_admin_editing)
+            )
+         {
             global $wpdb;
 
             // If someone has submitted a new user login

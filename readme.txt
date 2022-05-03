@@ -3,8 +3,8 @@ Contributors: MillerMediaNow, mikemm01
 Tags: username, edit, profile, users
 Requires PHP: 5.6
 Requires at least: 3.0
-Tested up to: 5.8
-Stable tag: 1.1.1
+Tested up to: 5.9
+Stable tag: 1.2
 License: GPLv2
 
 The Edit Usernames plugin allows WordPress admins and WooCommerce managers to edit the users' usernames through the admin dashboard. Simple!
@@ -31,6 +31,11 @@ If you find that a part of this plugin isn't working, let us know what's broken 
 1. Pencil/edit icon in user edit screen
 
 == Changelog ==
+
+= 1.2 =
+* Tested up to WP 5.9
+* Add setting to enable editing admin usernames
+* Added further clarifying messages on user edit page
 
 = 1.1.1 =
 * Tested up to WP 5.3.2

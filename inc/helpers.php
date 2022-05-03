@@ -25,6 +25,8 @@ class EUN_Helpers {
             }
         } else {
             if ( $hook != 'user-edit.php' ) {
+                wp_register_script( 'self-admin-user', plugins_url( '../js/self_user.js', __FILE__ ), array( 'jquery' ) );
+                wp_enqueue_script( 'self-admin-user' );
                 return;
             }    
         }
@@ -33,7 +35,24 @@ class EUN_Helpers {
         $path = $_SERVER['REQUEST_URI'];
         $full_id_string = explode( 'user_id=', $path )[1];
         $id_string = explode( '&', $full_id_string )[0];
-        if ( is_super_admin( $id_string ) ) {
+
+        $option_values = get_option(EUN_SETTINGS_PREFIX.'options');
+        $allow_admin_editing = false;
+
+        if(is_array($option_values) && array_key_exists(EUN_SETTINGS_PREFIX.'edit_admin', $option_values) && $option_values[EUN_SETTINGS_PREFIX.'edit_admin']=='on'){
+            $allow_admin_editing = true;
+        }
+
+        if ( is_super_admin( $id_string ) && !$allow_admin_editing ) {
+            wp_register_script( 'super-admin-user', plugins_url( '../js/super_admin_user.js', __FILE__ ), array( 'jquery' ) );
+            wp_enqueue_script( 'super-admin-user' );
+
+            $script_params = array(
+                'settings_url' => admin_url('/options-general.php?page=eun_settings')
+            );
+
+            wp_localize_script( 'super-admin-user', 'scriptParams', $script_params );
+
             return;
         }
 
