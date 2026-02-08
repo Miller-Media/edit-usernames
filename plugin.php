@@ -5,7 +5,8 @@ Description: Change a user's username within the admin screen.
 Author: Miller Media
 Author URI: http://www.millermedia.io
 Version: 1.2
-Requires PHP: 5.6
+Requires PHP: 8.1
+Tested up to: 6.9
 License: GPLv2
 Text Domain: edit-usernames
 */
