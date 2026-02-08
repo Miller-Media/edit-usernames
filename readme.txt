@@ -1,9 +1,9 @@
 === Edit Usernames ===
 Contributors: MillerMediaNow, mikemm01
 Tags: username, edit, profile, users
-Requires PHP: 5.6
+Requires PHP: 8.1
 Requires at least: 3.0
-Tested up to: 5.9
+Tested up to: 6.9
 Stable tag: 1.2
 License: GPLv2
 
