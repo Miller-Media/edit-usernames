@@ -21,12 +21,12 @@ function eun_settings_options_page()
 ?>
   <div>
       <h1><?php echo get_option(EUN_SETTINGS_PREFIX.'edit_admin'); ?></h1>
-  <h2>Edit Usernames Settings</h2>
+  <h2><?php esc_html_e('Edit Usernames Settings', 'edit-usernames'); ?></h2>
   <form method="post" action="options.php">
   <?php settings_fields( EUN_SETTINGS_PREFIX.'options' ); ?>
   <table>
   <tr>
-  <th scope="row"><label for="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'edit_admin]'; ?>">Allow admin username editing?</label></th>
+  <th scope="row"><label for="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'edit_admin]'; ?>"><?php esc_html_e('Allow admin username editing?', 'edit-usernames'); ?></label></th>
   <td>
       <input type="checkbox" id="<?php echo EUN_SETTINGS_PREFIX.'edit_admin'?>" name="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'edit_admin]'?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'edit_admin', $options) && $options[EUN_SETTINGS_PREFIX.'edit_admin']=='on'){echo 'checked=checked';} ?>.'/
   </td>

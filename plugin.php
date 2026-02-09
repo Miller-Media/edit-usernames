@@ -11,6 +11,10 @@ License: GPLv2
 Text Domain: edit-usernames
 */
 
+add_action('plugins_loaded', function() {
+    load_plugin_textdomain('edit-usernames', false, dirname(plugin_basename(__FILE__)) . '/languages');
+});
+
 if ( is_admin() ){
 
     // boolean to control whether to allow self editing
