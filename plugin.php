@@ -26,7 +26,15 @@ if ( is_admin() ){
     require_once( EUN_PLUGIN_PATH . 'inc/settings.php' );
     require_once( EUN_PLUGIN_PATH . 'inc/helpers.php' );
     require_once( EUN_PLUGIN_PATH . 'inc/edit-usernames.php' );
+    require_once( EUN_PLUGIN_PATH . 'inc/review-notice.php' );
+
+    register_activation_hook( __FILE__, function() {
+        if ( ! get_option( 'eun_activated_on' ) ) {
+            update_option( 'eun_activated_on', time() );
+        }
+    });
 
     new EUN_Helpers();
-    new EUN_EditUsernames();    
+    new EUN_EditUsernames();
+    new EUN_ReviewNotice( 'Edit Usernames', 'edit-usernames', 'eun_activated_on', 'edit-usernames', plugin_dir_url( __FILE__ ) . 'assets/icon-128x128.jpg' );
 }
