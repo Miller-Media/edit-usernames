@@ -1,0 +1,43 @@
+# Translation file for Edit Usernames
+# Copyright (C) 2026 Miller Media
+# This file is distributed under the same license as the plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Edit Usernames\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/edit-usernames\n"
+"POT-Creation-Date: 2026-02-10 12:00+0000\n"
+"PO-Revision-Date: 2026-02-10 12:00+0000\n"
+"Last-Translator: Crash Override (AI)\n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "ERROR: Username invalid. Please choose another."
+msgstr "BŁĄD: Nieprawidłowa nazwa użytkownika. Wybierz inną."
+
+msgid "ERROR: Username already exists. Please choose another."
+msgstr "BŁĄD: Nazwa użytkownika już istnieje. Wybierz inną."
+
+msgid "An error occurred:"
+msgstr "Wystąpił błąd:"
+
+msgid "You can edit the username by typing in this field."
+msgstr "Możesz edytować nazwę użytkownika, wpisując ją w tym polu."
+
+msgid "Edit Usernames Settings"
+msgstr "Ustawienia edycji nazw użytkowników"
+
+msgid "Allow admin username editing?"
+msgstr "Zezwolić na edycję nazwy administratora?"
+
+msgid "Hey! You've been using %1$s for a while now. If you're enjoying it, would you mind %2$sleaving a 5-star review%3$s? It helps us keep improving! 🙏"
+msgstr "Hej! Używasz %1$s już od jakiegoś czasu. Jeśli Ci się podoba, czy mógłbyś %2$szostawić 5-gwiazdkową recenzję%3$s? To pomaga nam się rozwijać! 🙏"
+
+msgid "Leave a Review"
+msgstr "Zostaw recenzję"
+
+msgid "Maybe Later"
+msgstr "Może później"
