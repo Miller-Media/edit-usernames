@@ -1,0 +1,11 @@
+{
+  "Allow admin username editing?": "管理者のユーザー名編集を許可しますか？",
+  "An error occurred:": "エラーが発生しました：",
+  "Edit Usernames Settings": "ユーザー名編集設定",
+  "ERROR: Username already exists. Please choose another.": "エラー：ユーザー名は既に存在します。別のものを選択してください。",
+  "ERROR: Username invalid. Please choose another.": "エラー：ユーザー名が無効です。別のものを選択してください。",
+  "Leave a Review": "レビューを残す",
+  "Maybe Later": "後で",
+  "re enjoying it, would you mind %2$sleaving a 5-star review%3$s? It helps us keep improving! 🙏": "楽しんでいただけましたら、%2$s5つ星のレビューを残して%3$sいただけますか？改善を続ける励みになります！🙏",
+  "You can edit the username by typing in this field.": "このフィールドに入力してユーザー名を編集できます。"
+}
