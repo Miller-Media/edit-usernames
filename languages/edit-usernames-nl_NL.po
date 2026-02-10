@@ -1,0 +1,41 @@
+# Dutch translation for Edit Usernames
+msgid ""
+msgstr ""
+"Project-Id-Version: Edit Usernames\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/edit-usernames\n"
+"POT-Creation-Date: 2026-02-10 12:30+0000\n"
+"PO-Revision-Date: 2026-02-10 12:30+0000\n"
+"Last-Translator: Crash Override (AI)\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "ERROR: Username invalid. Please choose another."
+msgstr "FOUT: Gebruikersnaam ongeldig. Kies een andere."
+
+msgid "ERROR: Username already exists. Please choose another."
+msgstr "FOUT: Gebruikersnaam bestaat al. Kies een andere."
+
+msgid "An error occurred:"
+msgstr "Er is een fout opgetreden:"
+
+msgid "You can edit the username by typing in this field."
+msgstr "Je kunt de gebruikersnaam bewerken door in dit veld te typen."
+
+msgid "Edit Usernames Settings"
+msgstr "Instellingen gebruikersnamen bewerken"
+
+msgid "Allow admin username editing?"
+msgstr "Bewerken van admin-gebruikersnaam toestaan?"
+
+msgid "Hey! You've been using %1$s for a while now. If you're enjoying it, would you mind %2$sleaving a 5-star review%3$s? It helps us keep improving! 🙏"
+msgstr "Hé! Je gebruikt %1$s nu al een tijdje. Als je er blij mee bent, zou je dan %2$seen 5-sterren review willen achterlaten%3$s? Het helpt ons om te blijven verbeteren! 🙏"
+
+msgid "Leave a Review"
+msgstr "Laat een review achter"
+
+msgid "Maybe Later"
+msgstr "Misschien later"
