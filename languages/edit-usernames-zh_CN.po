@@ -1,0 +1,44 @@
+# Chinese (Simplified) translation for edit-usernames.
+# Copyright (C) 2026 Miller Media
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: edit-usernames\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/edit-usernames\n"
+"Last-Translator: Crash Override (AI)\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-10T06:08:33+00:00\n"
+"PO-Revision-Date: 2026-02-10 06:08+0000\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Allow admin username editing?"
+msgstr "允许编辑管理员用户名？"
+
+msgid "An error occurred:"
+msgstr "发生错误："
+
+msgid "Edit Usernames Settings"
+msgstr "编辑用户名设置"
+
+msgid "ERROR: Username already exists. Please choose another."
+msgstr "错误：用户名已存在。请选择另一个。"
+
+msgid "ERROR: Username invalid. Please choose another."
+msgstr "错误：用户名无效。请选择另一个。"
+
+msgid "Leave a Review"
+msgstr "留下评论"
+
+msgid "Maybe Later"
+msgstr "稍后再说"
+
+msgid "re enjoying it, would you mind %2$sleaving a 5-star review%3$s? It helps us keep improving! 🙏"
+msgstr "如果您喜欢它，您是否愿意%2$s留下 5 星评论%3$s？这有助于我们不断改进！🙏"
+
+msgid "You can edit the username by typing in this field."
+msgstr "您可以通过在此字段中输入来编辑用户名。"
+

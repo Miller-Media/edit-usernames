@@ -1,0 +1,11 @@
+{
+  "Allow admin username editing?": "允许编辑管理员用户名？",
+  "An error occurred:": "发生错误：",
+  "Edit Usernames Settings": "编辑用户名设置",
+  "ERROR: Username already exists. Please choose another.": "错误：用户名已存在。请选择另一个。",
+  "ERROR: Username invalid. Please choose another.": "错误：用户名无效。请选择另一个。",
+  "Leave a Review": "留下评论",
+  "Maybe Later": "稍后再说",
+  "re enjoying it, would you mind %2$sleaving a 5-star review%3$s? It helps us keep improving! 🙏": "如果您喜欢它，您是否愿意%2$s留下 5 星评论%3$s？这有助于我们不断改进！🙏",
+  "You can edit the username by typing in this field.": "您可以通过在此字段中输入来编辑用户名。"
+}
