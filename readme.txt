@@ -17,6 +17,23 @@ The Edit Usernames plugin allows WordPress admins and WooCommerce managers to ed
 
 Note: Editing of your own username and those of Super Admins are currently disallowed.
 
+== Localizations ==
+This plugin is available in the following languages:
+
+* English
+* Chinese Simplified (简体中文)
+* Dutch (Nederlands)
+* French (Français)
+* German (Deutsch)
+* Italian (Italiano)
+* Japanese (日本語)
+* Polish (Polski)
+* Portuguese - Brazil (Português do Brasil)
+* Russian (Русский)
+* Spanish (Español)
+* Swedish (Svenska)
+* Turkish (Türkçe)
+
 == Installation ==
 
 1. Upload `Edit Usernames` to the `/wp-content/plugins/` directory
