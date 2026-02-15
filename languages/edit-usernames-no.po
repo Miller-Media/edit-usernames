@@ -1,0 +1,58 @@
+# Norwegian (Bokmål) translation for Edit Usernames.
+# Copyright (C) 2026 Miller Media
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Edit Usernames 1.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/edit-usernames\n"
+"Last-Translator: Miller Media <developer@millermedia.io>\n"
+"Language-Team: Norwegian (Bokmål) <no@li.org>\n"
+"Language: no\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-09T19:13:17+00:00\n"
+"PO-Revision-Date: 2026-02-15 00:00+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: edit-usernames\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: plugin.php
+msgid "Edit Usernames"
+msgstr "Rediger brukernavn"
+
+#. Description of the plugin
+#: plugin.php
+msgid "Change a user's username within the admin screen."
+msgstr "Endre en brukers brukernavn fra administrasjonsskjermen."
+
+#. Author of the plugin
+#: plugin.php
+msgid "Miller Media"
+msgstr "Miller Media"
+
+#. Author URI of the plugin
+#: plugin.php
+msgid "http://www.millermedia.io"
+msgstr "http://www.millermedia.io"
+
+#: inc/edit-usernames.php:35
+msgid "ERROR: Username invalid. Please choose another."
+msgstr "FEIL: Brukernavn ugyldig. Vennligst velg et annet."
+
+#: inc/edit-usernames.php:37
+msgid "ERROR: Username already exists. Please choose another."
+msgstr "FEIL: Brukernavnet finnes allerede. Vennligst velg et annet."
+
+#: inc/edit-usernames.php:128
+msgid "An error occurred:"
+msgstr "Det oppstod en feil:"
+
+#: inc/settings.php:24
+msgid "Edit Usernames Settings"
+msgstr "Innstillinger for Rediger brukernavn"
+
+#: inc/settings.php:29
+msgid "Allow admin username editing?"
+msgstr "Tillat redigering av administratorbrukernavn?"
