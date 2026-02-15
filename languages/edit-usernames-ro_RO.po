@@ -1,0 +1,43 @@
+# Romanian translation for Edit Usernames
+# Copyright (C) 2026 Miller Media
+# This file is distributed under the same license as the plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Edit Usernames\n"
+"Report-Msgid-Bugs-To: https://github.com/Miller-Media/edit-usernames/issues\n"
+"POT-Creation-Date: 2026-02-15 15:00+0000\n"
+"PO-Revision-Date: 2026-02-15 15:00+0000\n"
+"Last-Translator: Crash Override (AI)\n"
+"Language-Team: Romanian\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
+
+msgid "Allow admin username editing?"
+msgstr "Permiteți editarea numelui de utilizator admin?"
+
+msgid "An error occurred:"
+msgstr "A apărut o eroare:"
+
+msgid "Edit Usernames Settings"
+msgstr "Setări editare nume utilizatori"
+
+msgid "ERROR: Username already exists. Please choose another."
+msgstr "EROARE: Numele de utilizator există deja. Vă rugăm să alegeți altul."
+
+msgid "ERROR: Username invalid. Please choose another."
+msgstr "EROARE: Nume de utilizator invalid. Vă rugăm să alegeți altul."
+
+msgid "Hey! You've been using %1$s for a while now. If you're enjoying it, would you mind %2$sleaving a 5-star review%3$s? It helps us keep improving! 🙏"
+msgstr "Salut! Folosiți %1$s de ceva timp. Dacă vă place, ați putea %2$slăsa o recenzie de 5 stele%3$s? Ne ajută să continuăm să ne îmbunătățim! 🙏"
+
+msgid "Leave a Review"
+msgstr "Lăsați o recenzie"
+
+msgid "Maybe Later"
+msgstr "Poate mai târziu"
+
+msgid "You can edit the username by typing in this field."
+msgstr "Puteți edita numele de utilizator tastând în acest câmp."
