@@ -1,0 +1,59 @@
+# Copyright (C) 2026 Miller Media
+# This file is distributed under the GPLv2.
+# Translators:
+# Slovenian Translation for Edit Usernames Plugin
+msgid ""
+msgstr ""
+"Project-Id-Version: Edit Usernames 1.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/edit-usernames\n"
+"Last-Translator: \n"
+"Language-Team: Slovenian\n"
+"Language: sl_SI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-09T19:13:17+00:00\n"
+"PO-Revision-Date: 2026-02-15\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: edit-usernames\n"
+
+#. Plugin Name of the plugin
+#: plugin.php
+msgid "Edit Usernames"
+msgstr "Uredi uporabniška imena"
+
+#. Description of the plugin
+#: plugin.php
+msgid "Change a user's username within the admin screen."
+msgstr "Spremenite uporabniško ime v skrbniškem vmesniku."
+
+#. Author of the plugin
+#: plugin.php
+msgid "Miller Media"
+msgstr "Miller Media"
+
+#. Author URI of the plugin
+#: plugin.php
+msgid "http://www.millermedia.io"
+msgstr "http://www.millermedia.io"
+
+#: inc/edit-usernames.php:35
+msgid "ERROR: Username invalid. Please choose another."
+msgstr "NAPAKA: Uporabniško ime je neveljavno. Prosimo, izberite drugo."
+
+#: inc/edit-usernames.php:37
+msgid "ERROR: Username already exists. Please choose another."
+msgstr "NAPAKA: Uporabniško ime že obstaja. Prosimo, izberite drugo."
+
+#: inc/edit-usernames.php:128
+msgid "An error occurred:"
+msgstr "Prišlo je do napake:"
+
+#: inc/settings.php:24
+msgid "Edit Usernames Settings"
+msgstr "Nastavitve urejanja uporabniških imen"
+
+#: inc/settings.php:29
+msgid "Allow admin username editing?"
+msgstr "Dovoli urejanje skrbniškega uporabniškega imena?"
