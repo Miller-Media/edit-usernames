@@ -1,0 +1,41 @@
+# Thai translation for Edit Usernames
+msgid ""
+msgstr ""
+"Project-Id-Version: Edit Usernames\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/edit-usernames\n"
+"POT-Creation-Date: 2026-02-11 21:29+0000\n"
+"PO-Revision-Date: 2026-02-14 18:54+0000\n"
+"Last-Translator: Crash Override (AI)\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "ERROR: Username invalid. Please choose another."
+msgstr "ข้อผิดพลาด: ชื่อผู้ใช้ไม่ถูกต้อง โปรดเลือกชื่ออื่น"
+
+msgid "ERROR: Username already exists. Please choose another."
+msgstr "ข้อผิดพลาด: ชื่อผู้ใช้มีอยู่แล้ว โปรดเลือกชื่ออื่น"
+
+msgid "An error occurred:"
+msgstr "เกิดข้อผิดพลาด:"
+
+msgid "You can edit the username by typing in this field."
+msgstr "คุณสามารถแก้ไขชื่อผู้ใช้ได้โดยพิมพ์ในช่องนี้"
+
+msgid "Edit Usernames Settings"
+msgstr "การตั้งค่าการแก้ไขชื่อผู้ใช้"
+
+msgid "Allow admin username editing?"
+msgstr "อนุญาตให้แก้ไขชื่อผู้ใช้ผู้ดูแลระบบหรือไม่?"
+
+msgid "Hey! You've been using %1$s for a while now. If you're enjoying it, would you mind %2$sleaving a 5-star review%3$s? It helps us keep improving! 🙏"
+msgstr "สวัสดี! คุณใช้ %1$s มาสักพักแล้ว หากคุณพอใจ คุณช่วย%2$sเขียนรีวิว 5 ดาว%3$sได้ไหม? มันช่วยให้เราปรับปรุงต่อไปได้! 🙏"
+
+msgid "Leave a Review"
+msgstr "เขียนรีวิว"
+
+msgid "Maybe Later"
+msgstr "ภายหลัง"
