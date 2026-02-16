@@ -60,6 +60,28 @@ This plugin is available in the following languages:
 
 If you find that a part of this plugin isn't working, let us know what's broken in [its support forum](https://wordpress.org/support/plugin/edit-usernames/) so we can make it better. Thanks!
 
+== Frequently Asked Questions ==
+
+= How do I edit a username? =
+
+Go to Users in the WordPress admin, click on the user you want to edit, and you will see the username field is editable. Change it and click "Update User".
+
+= Can I edit my own username? =
+
+No. For security reasons, you cannot edit your own username. Another administrator must make the change for you.
+
+= Can I edit a Super Admin's username? =
+
+By default, editing Super Admin usernames is disallowed. However, there is a setting under Settings > General to enable editing of admin usernames if needed.
+
+= Will editing a username break anything? =
+
+No. The plugin updates all references to the previous username, including comment author names. The user's posts, pages, and other content remain intact.
+
+= What languages are supported? =
+
+The plugin is available in 30 languages with more being added regularly. We are working toward supporting 50 languages total!
+
 == Screenshots ==
 
 1. Pencil/edit icon in user edit screen
