@@ -34,6 +34,12 @@ if ( is_admin() ){
         }
     });
 
+    add_filter('plugin_action_links_' . plugin_basename(__FILE__), function($links) {
+        $settings_link = '<a href="' . admin_url('options-general.php?page=eun_settings') . '">' . __('Settings', 'edit-usernames') . '</a>';
+        array_unshift($links, $settings_link);
+        return $links;
+    });
+
     new EUN_Helpers();
     new EUN_EditUsernames();
     new EUN_ReviewNotice( 'Edit Usernames', 'edit-usernames', 'eun_activated_on', 'edit-usernames', plugin_dir_url( __FILE__ ) . 'assets/icon-128x128.jpg' );
