@@ -31,6 +31,13 @@ function eun_settings_options_page()
       <input type="checkbox" id="<?php echo EUN_SETTINGS_PREFIX.'edit_admin'?>" name="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'edit_admin]'?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'edit_admin', $options) && $options[EUN_SETTINGS_PREFIX.'edit_admin']=='on'){echo 'checked=checked';} ?>.'/
   </td>
   </tr>
+  <tr>
+  <th scope="row"><label for="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'delete_data_on_uninstall]'; ?>"><?php esc_html_e('Remove all plugin data when deleted', 'edit-usernames'); ?></label></th>
+  <td>
+      <input type="checkbox" id="<?php echo EUN_SETTINGS_PREFIX.'delete_data_on_uninstall'?>" name="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'delete_data_on_uninstall]'?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'delete_data_on_uninstall', $options) && $options[EUN_SETTINGS_PREFIX.'delete_data_on_uninstall']=='on'){echo 'checked=checked';} ?>/>
+      <p class="description"><?php esc_html_e('Check this box if you want all plugin settings and data to be removed when the plugin is deleted.', 'edit-usernames'); ?></p>
+  </td>
+  </tr>
   </table>
   <?php submit_button(); ?>
   </form>
