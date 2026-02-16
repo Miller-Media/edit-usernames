@@ -111,6 +111,7 @@ The plugin is available in 30 languages with more being added regularly. We are 
 = 1.3.0 =
 * Added translations for 50 languages
 * Added POT translation template file
+* Added opt-in data cleanup on plugin deletion
 * Added Settings link on Plugins page
 * Updated FAQ section
 * Updated readme with complete language list
