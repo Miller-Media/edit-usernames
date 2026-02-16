@@ -20,19 +20,36 @@ Note: Editing of your own username and those of Super Admins are currently disal
 == Localizations ==
 This plugin is available in the following languages:
 
-* English
+* Arabic (العربية)
+* Bulgarian (Български)
 * Chinese Simplified (简体中文)
+* Croatian (Hrvatski)
+* Czech (Čeština)
+* Danish (Dansk)
 * Dutch (Nederlands)
+* Finnish (Suomi)
 * French (Français)
 * German (Deutsch)
+* Greek (Ελληνικά)
+* Hebrew (עברית)
+* Hungarian (Magyar)
+* Indonesian (Bahasa Indonesia)
 * Italian (Italiano)
 * Japanese (日本語)
+* Korean (한국어)
+* Lithuanian (Lietuvių)
+* Norwegian (Norsk)
 * Polish (Polski)
 * Portuguese - Brazil (Português do Brasil)
+* Romanian (Română)
 * Russian (Русский)
+* Slovak (Slovenčina)
+* Slovenian (Slovenščina)
 * Spanish (Español)
 * Swedish (Svenska)
+* Thai (ไทย)
 * Turkish (Türkçe)
+* Vietnamese (Tiếng Việt)
 
 == Installation ==
 
