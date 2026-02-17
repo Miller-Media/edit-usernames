@@ -4,9 +4,9 @@ Plugin Name: Edit Usernames
 Description: Change a user's username within the admin screen.
 Author: Miller Media
 Author URI: https://mattmiller.ai
-Version:           1.3.1
+Version:           1.3.2
 Requires PHP: 8.1
-Tested up to: 6.9.1
+Tested up to: 6.9
 License: GPL-2.0-or-later
 Text Domain: edit-usernames
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -15,10 +15,6 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-add_action('plugins_loaded', function() {
-    load_plugin_textdomain('edit-usernames', false, dirname(plugin_basename(__FILE__)) . '/languages');
-});
 
 if ( is_admin() ){
 

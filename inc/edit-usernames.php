@@ -125,8 +125,7 @@ class EUN_EditUsernames {
 
                     } else {
                         // Display database error
-                        echo '<div id="message" class="error"><p><strong>' . esc_html__('An error occurred:', 'edit-usernames') . '</strong></p></div>';
-                        var_dump( $wpdb->last_error );
+                        echo '<div id="message" class="error"><p><strong>' . esc_html__('An error occurred:', 'edit-usernames') . '</strong> ' . esc_html( $wpdb->last_error ) . '</p></div>';
                         die();
                     }
                 }
