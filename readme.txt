@@ -3,8 +3,8 @@ Contributors: MillerMediaNow, mikemm01
 Tags: username, edit, profile, users
 Requires PHP: 8.1
 Requires at least: 3.0
-Tested up to: 6.9.1
-Stable tag: 1.3.1
+Tested up to: 6.9
+Stable tag: 1.3.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,14 @@ The plugin is available in 30 languages with more being added regularly. We are 
 1. Pencil/edit icon in user edit screen
 
 == Changelog ==
+
+= 1.3.2 =
+* Added ABSPATH checks to inc/settings.php and inc/review-notice.php
+* Added sanitization callback to register_setting()
+* Fixed unescaped attribute outputs in settings page
+* Removed var_dump() debug call
+* Removed deprecated load_plugin_textdomain() call
+* Updated "Tested up to" to 6.9
 
 = 1.3.1 =
 * Added GPL license declaration to plugin header

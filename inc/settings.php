@@ -1,13 +1,30 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Access denied.' );
+}
+
 function eun_register_settings() {
     if (false == get_option(EUN_SETTINGS_PREFIX.'options')) {
         add_option( EUN_SETTINGS_PREFIX.'options');
     }
 
-    register_setting( EUN_SETTINGS_PREFIX.'options', EUN_SETTINGS_PREFIX.'options');
+    register_setting( EUN_SETTINGS_PREFIX.'options', EUN_SETTINGS_PREFIX.'options', array(
+        'sanitize_callback' => 'eun_sanitize_options',
+    ) );
 }
 add_action( 'admin_init', 'eun_register_settings' );
+
+function eun_sanitize_options( $input ) {
+    $sanitized = array();
+    if ( isset( $input[ EUN_SETTINGS_PREFIX . 'edit_admin' ] ) ) {
+        $sanitized[ EUN_SETTINGS_PREFIX . 'edit_admin' ] = sanitize_text_field( $input[ EUN_SETTINGS_PREFIX . 'edit_admin' ] );
+    }
+    if ( isset( $input[ EUN_SETTINGS_PREFIX . 'delete_data_on_uninstall' ] ) ) {
+        $sanitized[ EUN_SETTINGS_PREFIX . 'delete_data_on_uninstall' ] = sanitize_text_field( $input[ EUN_SETTINGS_PREFIX . 'delete_data_on_uninstall' ] );
+    }
+    return $sanitized;
+}
 
 function eun_register_options_page() {
     add_options_page('General Settings', EUN_PLUGIN_NAME, 'manage_options', 'eun_settings', 'eun_settings_options_page');
@@ -26,15 +43,15 @@ function eun_settings_options_page()
   <?php settings_fields( EUN_SETTINGS_PREFIX.'options' ); ?>
   <table>
   <tr>
-  <th scope="row"><label for="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'edit_admin]'; ?>"><?php esc_html_e('Allow admin username editing?', 'edit-usernames'); ?></label></th>
+  <th scope="row"><label for="<?php echo esc_attr( $option_array_name . '[' . EUN_SETTINGS_PREFIX . 'edit_admin]' ); ?>"><?php esc_html_e('Allow admin username editing?', 'edit-usernames'); ?></label></th>
   <td>
-      <input type="checkbox" id="<?php echo esc_attr(EUN_SETTINGS_PREFIX.'edit_admin'); ?>" name="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'edit_admin]'?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'edit_admin', $options) && $options[EUN_SETTINGS_PREFIX.'edit_admin']=='on'){echo 'checked=checked';} ?>.'/
+      <input type="checkbox" id="<?php echo esc_attr(EUN_SETTINGS_PREFIX.'edit_admin'); ?>" name="<?php echo esc_attr( $option_array_name . '[' . EUN_SETTINGS_PREFIX . 'edit_admin]' ); ?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'edit_admin', $options) && $options[EUN_SETTINGS_PREFIX.'edit_admin']=='on'){echo 'checked=checked';} ?>/>
   </td>
   </tr>
   <tr>
-  <th scope="row"><label for="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'delete_data_on_uninstall]'; ?>"><?php esc_html_e('Remove all plugin data when deleted', 'edit-usernames'); ?></label></th>
+  <th scope="row"><label for="<?php echo esc_attr( $option_array_name . '[' . EUN_SETTINGS_PREFIX . 'delete_data_on_uninstall]' ); ?>"><?php esc_html_e('Remove all plugin data when deleted', 'edit-usernames'); ?></label></th>
   <td>
-      <input type="checkbox" id="<?php echo esc_attr(EUN_SETTINGS_PREFIX.'delete_data_on_uninstall'); ?>" name="<?php echo $option_array_name.'['.EUN_SETTINGS_PREFIX.'delete_data_on_uninstall]'?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'delete_data_on_uninstall', $options) && $options[EUN_SETTINGS_PREFIX.'delete_data_on_uninstall']=='on'){echo 'checked=checked';} ?>/>
+      <input type="checkbox" id="<?php echo esc_attr(EUN_SETTINGS_PREFIX.'delete_data_on_uninstall'); ?>" name="<?php echo esc_attr( $option_array_name . '[' . EUN_SETTINGS_PREFIX . 'delete_data_on_uninstall]' ); ?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'delete_data_on_uninstall', $options) && $options[EUN_SETTINGS_PREFIX.'delete_data_on_uninstall']=='on'){echo 'checked=checked';} ?>/>
       <p class="description"><?php esc_html_e('Check this box if you want all plugin settings and data to be removed when the plugin is deleted.', 'edit-usernames'); ?></p>
   </td>
   </tr>
