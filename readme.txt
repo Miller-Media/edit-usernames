@@ -4,8 +4,9 @@ Tags: username, edit, profile, users
 Requires PHP: 8.1
 Requires at least: 3.0
 Tested up to: 6.9.1
-Stable tag: 1.3.0
-License: GPLv2
+Stable tag: 1.3.1
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 The Edit Usernames plugin allows WordPress admins and WooCommerce managers to edit the users' usernames through the admin dashboard. Simple!
 
@@ -107,6 +108,13 @@ The plugin is available in 30 languages with more being added regularly. We are 
 1. Pencil/edit icon in user edit screen
 
 == Changelog ==
+
+= 1.3.1 =
+* Added GPL license declaration to plugin header
+* Updated Author URI
+* Added direct file access protection to all PHP files
+* Improved output escaping and input sanitization
+* Removed non-production files from plugin directory
 
 = 1.3.0 =
 * Added translations for 50 languages
