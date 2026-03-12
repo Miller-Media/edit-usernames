@@ -1,6 +1,6 @@
 === Edit Usernames ===
 Contributors: MillerMediaNow, mikemm01
-Tags: username, edit, profile, users
+Tags: username, edit, users, user-management, profile
 Requires PHP: 8.1
 Requires at least: 3.0
 Tested up to: 6.9
