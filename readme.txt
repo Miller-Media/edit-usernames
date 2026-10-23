@@ -112,7 +112,7 @@ The plugin is available in 30 languages with more being added regularly. We are 
 = 1.3.3 =
 * Fixed: the "Edit" button next to the username field on the user edit screen now makes the field editable
 * Added help text under the "Allow admin username editing?" setting explaining where usernames are edited
-* Hardened request handling: nonce and capability checks, input sanitization, prepared SQL and output escaping
+* Hardened request handling: the username change now verifies the profile form's nonce, input is unslashed and sanitized, and admin notices are escaped
 * Raised the minimum supported WordPress version to 3.1
 * Tested up to WordPress 7.1
 
