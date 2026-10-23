@@ -46,6 +46,7 @@ function eun_settings_options_page()
   <th scope="row"><label for="<?php echo esc_attr( $option_array_name . '[' . EUN_SETTINGS_PREFIX . 'edit_admin]' ); ?>"><?php esc_html_e('Allow admin username editing?', 'edit-usernames'); ?></label></th>
   <td>
       <input type="checkbox" id="<?php echo esc_attr(EUN_SETTINGS_PREFIX.'edit_admin'); ?>" name="<?php echo esc_attr( $option_array_name . '[' . EUN_SETTINGS_PREFIX . 'edit_admin]' ); ?>" <?php if(is_array($options) && array_key_exists(EUN_SETTINGS_PREFIX.'edit_admin', $options) && $options[EUN_SETTINGS_PREFIX.'edit_admin']=='on'){echo 'checked=checked';} ?>/>
+      <p class="description"><?php esc_html_e('By default, usernames belonging to administrators and network super admins cannot be edited. Check this box to allow editing those too. Regular (non-admin) usernames are always editable on the Users > All Users > Edit screen, not on your own profile page.', 'edit-usernames'); ?></p>
   </td>
   </tr>
   <tr>
