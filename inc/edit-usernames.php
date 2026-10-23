@@ -10,6 +10,7 @@ class EUN_EditUsernames {
 	 * Add hooks
 	 */
 	public function __construct() {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display parameter, no state change.
 		if ( isset( $_GET['usernamenotupdated'] ) ) {
 			add_action( 'admin_notices', array( $this, 'username_admin_notice__error' ) );
 		}
@@ -29,16 +30,24 @@ class EUN_EditUsernames {
 	 * Display WordPress error message if username already exists
 	 */
 	public function username_admin_notice__error() {
-		if ( $_GET['usernamenotupdated'] == 'usernameinvalid' ) {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display parameter, no state change.
+		if ( ! isset( $_GET['usernamenotupdated'] ) ) {
+			return;
+		}
+
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display parameter, no state change.
+		$notice_type = sanitize_text_field( wp_unslash( $_GET['usernamenotupdated'] ) );
+
+		if ( 'usernameinvalid' === $notice_type ) {
 			$message = __( 'ERROR: Username invalid. Please choose another.', 'edit-usernames' );
-		} elseif ( $_GET['usernamenotupdated'] == 'usernameexists' ) {
+		} elseif ( 'usernameexists' === $notice_type ) {
 			$message = __( 'ERROR: Username already exists. Please choose another.', 'edit-usernames' );
 		} else {
 			return;
 		}
 
 		$class = 'notice notice-error';
-		printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message );
+		printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 	}
 
 	/**
@@ -67,9 +76,14 @@ class EUN_EditUsernames {
 			// If someone has submitted a new user login
 			if ( isset( $_POST['user_login'] ) && ! empty( $_POST['user_login'] ) ) {
 
+				// The core profile forms that trigger this hook already verify this nonce
+				// in wp-admin/user-edit.php and wp-admin/profile.php before calling edit_user();
+				// verified again here for defense in depth.
+				check_admin_referer( 'update-user_' . $user_id );
+
 				$current_username = get_user_by( 'id', $user_id )->user_login;
 				$current_username = esc_sql( $current_username );
-				$new_username     = sanitize_text_field( $_POST['user_login'] );
+				$new_username     = sanitize_text_field( wp_unslash( $_POST['user_login'] ) );
 				$new_username     = esc_sql( $new_username );
 
 				// Nothing has changed, so we exit
@@ -86,37 +100,29 @@ class EUN_EditUsernames {
 					wp_safe_redirect( $redirect );
 					exit();
 				} else {
-					// Update username and related values
-					$sql_userlogin = $wpdb->prepare( "UPDATE $wpdb->users SET user_login = %s WHERE user_login = %s", $new_username, $current_username );
-
 					// Is display name the same as username?
-					$sql_user     = $wpdb->prepare( "SELECT * from $wpdb->users WHERE user_login = %s", $current_username );
-					$user_info    = $wpdb->get_row( $sql_user );
+					$user_info    = $wpdb->get_row( $wpdb->prepare( "SELECT * from $wpdb->users WHERE user_login = %s", $current_username ) );
 					$display_name = $user_info->display_name;
 
 					// Is nickname the same as username?
-					$sql_usermeta  = $wpdb->prepare( "SELECT meta_value from $wpdb->usermeta WHERE user_id = %s AND meta_key = 'nickname'", $user_id );
-					$usermeta_info = $wpdb->get_row( $sql_usermeta );
+					$usermeta_info = $wpdb->get_row( $wpdb->prepare( "SELECT meta_value from $wpdb->usermeta WHERE user_id = %s AND meta_key = 'nickname'", $user_id ) );
 					$nickname      = $usermeta_info->meta_value;
 
 					// If display name == username, update both
-					if ( $current_username == $display_name ) {
-						$sql_display_name = $wpdb->prepare( "UPDATE $wpdb->users SET display_name = %s WHERE user_login = %s", $new_username, $new_username );
-					}
+					$update_display_name = ( $current_username == $display_name );
 
 					// If nickname == username, update both
-					if ( $current_username == $nickname ) {
-						$sql_nickname = $wpdb->prepare( "UPDATE $wpdb->usermeta SET meta_value = %s WHERE user_id = %s AND meta_key = 'nickname'", $new_username, $user_id );
-					}
+					$update_nickname = ( $current_username == $nickname );
 
-					if ( false !== $wpdb->query( $sql_userlogin ) ) {
+					// Update username and related values
+					if ( false !== $wpdb->query( $wpdb->prepare( "UPDATE $wpdb->users SET user_login = %s WHERE user_login = %s", $new_username, $current_username ) ) ) {
 
-						if ( isset( $sql_display_name ) ) {
-							$wpdb->query( $sql_display_name );
+						if ( $update_display_name ) {
+							$wpdb->query( $wpdb->prepare( "UPDATE $wpdb->users SET display_name = %s WHERE user_login = %s", $new_username, $new_username ) );
 						}
 
-						if ( isset( $sql_nickname ) ) {
-							$wpdb->query( $sql_nickname );
+						if ( $update_nickname ) {
+							$wpdb->query( $wpdb->prepare( "UPDATE $wpdb->usermeta SET meta_value = %s WHERE user_id = %s AND meta_key = 'nickname'", $new_username, $user_id ) );
 						}
 					} else {
 						// Display database error
@@ -141,8 +147,7 @@ class EUN_EditUsernames {
 		$user_nicename = $user_id->user_nicename;
 
 		if ( $user_nicename != strtolower( str_replace( ' ', '-', $user_login ) ) ) {
-			$sql_nicename = $wpdb->prepare( "UPDATE $wpdb->users SET user_nicename = %s WHERE user_login = %s", strtolower( str_replace( ' ', '-', $user_login ) ), $user_login );
-			$wpdb->query( $sql_nicename );
+			$wpdb->query( $wpdb->prepare( "UPDATE $wpdb->users SET user_nicename = %s WHERE user_login = %s", strtolower( str_replace( ' ', '-', $user_login ) ), $user_login ) );
 		}
 	}
 
@@ -157,7 +162,6 @@ class EUN_EditUsernames {
 		$id           = $user_id->ID;
 		$display_name = $user_id->display_name;
 
-		$sql_comment_author = $wpdb->prepare( "UPDATE $wpdb->comments SET comment_author = %s WHERE user_id = %s", $display_name, $id );
-		$wpdb->query( $sql_comment_author );
+		$wpdb->query( $wpdb->prepare( "UPDATE $wpdb->comments SET comment_author = %s WHERE user_id = %s", $display_name, $id ) );
 	}
 }

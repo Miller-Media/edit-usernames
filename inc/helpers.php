@@ -29,7 +29,9 @@ class EUN_Helpers {
 		}
 
 		// Check if we're editing a super admin
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display parameter, no state change.
 		if ( isset( $_GET['user_id'] ) ) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display parameter, no state change.
 			$user_id             = intval( $_GET['user_id'] );
 			$option_values       = get_option( EUN_SETTINGS_PREFIX . 'options' );
 			$allow_admin_editing = false;
@@ -90,7 +92,7 @@ class EUN_Helpers {
 		}
 
 		// Check whether user being edited is a Super Admin; if so, do not enqueue scripts (disallows editing)
-		$path           = $_SERVER['REQUEST_URI'];
+		$path           = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
 		$full_id_string = explode( 'user_id=', $path )[1];
 		$id_string      = explode( '&', $full_id_string )[0];
 
