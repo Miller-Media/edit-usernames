@@ -2,9 +2,9 @@
 Contributors: MillerMediaNow, mikemm01
 Tags: username, edit, users, user-management, profile
 Requires PHP: 8.1
-Requires at least: 3.0
+Requires at least: 3.6
 Tested up to: 7.1
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,13 @@ The plugin is available in 30 languages with more being added regularly. We are 
 1. Pencil/edit icon in user edit screen
 
 == Changelog ==
+
+= 1.3.3 =
+* Fixed: the "Edit" button next to the username field on the user edit screen now makes the field editable
+* Added help text under the "Allow admin username editing?" setting explaining where usernames are edited
+* Hardened request handling: the username change now verifies the profile form's nonce, input is unslashed and sanitized, and admin notices are escaped
+* Raised the minimum supported WordPress version to 3.6
+* Tested up to WordPress 7.1
 
 = 1.3.2 =
 * Added ABSPATH checks to inc/settings.php and inc/review-notice.php
