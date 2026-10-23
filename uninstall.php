@@ -9,7 +9,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-$options = get_option( 'eun_setting_options' );
+$options     = get_option( 'eun_setting_options' );
 $delete_data = is_array( $options ) && ! empty( $options['eun_setting_delete_data_on_uninstall'] );
 
 if ( ! $delete_data ) {
