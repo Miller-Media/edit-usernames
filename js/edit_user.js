@@ -20,7 +20,7 @@ jQuery(document).ready(function(){
     $edit_username_field = jQuery('#user_login');
 
     $edit_username_button.on('click', function(){
-        $edit_username_field.attr('disabled', false);
+        $edit_username_field.prop('disabled', false).prop('readonly', false);
     });
 
     // Update display name if username has been edited and display name had previously been the same
