@@ -5,7 +5,7 @@ Description: Change a user's username within the admin screen.
 Author: Miller Media
 Author URI: https://mattmiller.ai
 Version:           1.3.3
-Requires at least: 3.1
+Requires at least: 3.6
 Requires PHP: 8.1
 Tested up to: 7.1
 License: GPL-2.0-or-later
