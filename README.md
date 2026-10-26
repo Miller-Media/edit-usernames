@@ -1,18 +1,13 @@
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=2271B1&center=true&vCenter=true&width=500&lines=Edit+Usernames" alt="Edit Usernames" />
-</p>
+<h1 align="center">Edit Usernames</h1>
 
 <p align="center">
 <pre align="center">
-              ___ ___ ___ _____
-             | __|   \_ _|_   _|
-             | _|| |) | |  | |
-             |___|___/___| |_|
+ ___ ___ ___ _____
+| __|   \_ _|_   _|
+| _|| |) | |  | |
+|___|___/___| |_|
 &nbsp;
- _   _ ___ ___ ___ _  _   _   __  __ ___ ___
-| | | / __| __| _ \ \| | /_\ |  \/  | __/ __|
-| |_| \__ \ _||   / .` |/ _ \| |\/| | _|\__ \
- \___/|___/___|_|_\_|\_/_/ \_\_|  |_|___|___/
+   [ usernames ]
 </pre>
 </p>
 
@@ -31,8 +26,9 @@
 
 ---
 
-Our plugin can be downloaded for free from the WordPress repository here:
-https://wordpress.org/plugins/edit-usernames/
+Lets WordPress admins and WooCommerce managers edit users' usernames from the admin dashboard. All references to the previous username are updated, including comment authors. Editing your own username, or a Super Admin's, is not allowed.
+
+Available for free on [WordPress.org](https://wordpress.org/plugins/edit-usernames/).
 
 ## Support Development
 
