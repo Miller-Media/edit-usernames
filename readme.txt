@@ -3,7 +3,7 @@ Contributors: MillerMediaNow, mikemm01
 Tags: username, edit, users, user-management, profile
 Requires PHP: 8.1
 Requires at least: 3.6
-Tested up to: 7.1
+Tested up to: 7.2
 Stable tag: 1.3.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
