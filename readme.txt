@@ -4,7 +4,7 @@ Tags: username, edit, users, user-management, profile
 Requires PHP: 8.1
 Requires at least: 3.6
 Tested up to: 7.2
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,9 @@ The plugin is available in 30 languages with more being added regularly. We are 
 1. Pencil/edit icon in user edit screen
 
 == Changelog ==
+
+= 1.3.4 =
+* Tested with WordPress 7.2; removed outdated Tested up to header.
 
 = 1.3.3 =
 * Fixed: the "Edit" button next to the username field on the user edit screen now makes the field editable
